@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <title>FINstreet</title>
     <style> 
       input[type=text] {
@@ -44,13 +43,25 @@
       #mynav{
         background: transparent;
       }
+      
+      #hoverBlue:hover{
+        background-color: #00ABC9;
+        
+      }
+
+      #hoverBlue{
+        border-radius: 15%;
+        transition: .5s;
+      }
+
+      
       </style>
       
   </head>
   <body>
    
     <!--HEADER-->
-      <nav id="mynav" style="background-color: #09193C; box-shadow: 0 8px 6px -6px black;" class="navbar navbar-expand-lg navbar-dark ">
+      <nav id="mynav" style="background: rgba(9, 25, 60,1); box-shadow: 0 8px 6px -6px black;" class="navbar navbar-expand-lg navbar-dark ">
         <a  class="navbar-brand" href="#" style="margin-right: 25%;">
           <img style="width: 100%;" class="img-responsive2"src="images/finstreet_resized.png">
         </a>
@@ -59,28 +70,28 @@
         </button>
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-5">
+          <ul class="navbar-nav mr-2">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a id="hoverBlue" class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About Me</a>
+              <a  id="hoverBlue" class="nav-link mx-2" href="#">About Me</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Blog</a>
+              <a  id="hoverBlue" class="nav-link mx-2" href="#">Blog</a>
             </li>
             <li class="nav-item">
-              <a  class="nav-link" href="#">Contact Us</a>
+              <a id="hoverBlue" class="nav-link " href="#">Contact Us</a>
             </li>
             <div class="row">
             <li class="nav-item col-1">
-              <a  class="nav-link" id="desktop_hidden" href="#"><img src="images/icon/iconfinder_03-twitter_104501.svg" style="height:18px;margin-top:3px;"></a>
+              <a  class="nav-link" id="desktop_hidden" href="#"><img src="icon/iconfinder_03-twitter_104501.svg" style="height:18px;margin-top:3px;"></a>
             </li>
             <li class="nav-item col-1" >
-              <a  class="nav-link"  id="desktop_hidden" href="#"><img src="images/icon/iconfinder_38-instagram_1161953.svg" style="height:18px;margin-top:3px;"></a>
+              <a  class="nav-link"  id="desktop_hidden" href="#"><img src="icon/iconfinder_38-instagram_1161953.svg" style="height:18px;margin-top:3px;"></a>
             </li> 
             <li class="nav-item  col-1" >
-              <a  class="nav-link" id="desktop_hidden" href="#"><img src="images/icon/iconfinder_06-facebook_104498.svg" style="height:18px;margin-top:3px;"></a>
+              <a  class="nav-link" id="desktop_hidden" href="#"><img src="icon/iconfinder_06-facebook_104498.svg" style="height:18px;margin-top:3px;"></a>
             </li> 
             
             </div>
@@ -114,7 +125,22 @@
         </ul>
         </div>
       </nav>
+      
       <!--HEADER_END-->
+      <!--add some javascript-->
+        <script>
+          var nav = Document.getElementById("mynav");
+          window.onscroll = function(){
+            if (window.pageYOffset >100){
+              mynav.style.background = "#fffff";
+            }
+            else{
+              mynav.style.background= "transparent";
+            }
+          }
+
+
+          </script>
     
 
     <!-- Optional JavaScript -->
